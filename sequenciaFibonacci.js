@@ -4,21 +4,23 @@ function fibonacci(n) {
         return n;
     }
 
+    let posicao = 2;
     let anterior = 1;
     let penultimo = 0;
 
-    for (let i = 2; i <= n; i++) {
+    while (true){
 
-        if (i == n) {
+        if (posicao == n) {
             return anterior + penultimo;
         }
 
         let temp = penultimo;
         penultimo = anterior;
         anterior = temp + penultimo;
+        posicao++;
 
     }
-
+    
 }
 
 console.log(fibonacci(6));
